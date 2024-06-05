@@ -32,6 +32,7 @@ jobs:
     - name: preZero Static Analysis
       run: |
         ${GITHUB_WORKSPACE}/sl --version
+        export SHIFTLEFT_SBOM_GENERATOR=1
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app dvna \
           --js  .
